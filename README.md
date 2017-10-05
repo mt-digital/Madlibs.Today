@@ -14,4 +14,4 @@ will be presented, namely what were the top ten or so words for each blank.
 Users will be able to sign in with either Google or Facebook. Sharing will be easy
 and users can post what they made directly to Facebook. 
 
-For more details, see the [Projects](/projects) and [Issues](/issues).
+For more details, see the [Projects](https://github.com/mtpain/Madlibs.Today/projects) and [Issues](https://github.com/mtpain/Madlibs.Today/issues).
