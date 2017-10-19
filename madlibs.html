@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script >
+
+        var d = new Date("Oct 14 2017");
+    document.getElementById('date').textContent= d ;
+    // callback function to read text boxes and assign the string value of the text boxes to spot in an array. From there the for loops copys the values of the JS array to the JSON object. !!We might just need on
+    var adlibs = { "libs": ["",""] , "text" : "\"ad1!\" he said ad2 as he jumped into his convertible ad3 and drove off with his ad3 wife." };
+    var libread = function(event){
+        adlibs.libs[0] = document.getElementById('ad1').value;
+        adlibs.libs[1] = document.getElementById('ad2').value;
+        adlibs.libs[2] = document.getElementById('ad3').value;
+        // for loop to alert user that a box is unused
+        // for ( i=0 ; i <= adlibs.libs.length ; i++) {
+        // if (adlibs.libs[i] == "" ) { throw new Error("Enter a value on empty box"); };
+        console.log(adlibs.libs,adlibs.libs[0], adlibs.libs[1] , adlibs.libs[2]);
+        var re = adlibs.text.replace(/ad1/g,adlibs.libs[0]);
+        var rep = re.replace(/ad2/g,adlibs.libs[1]);
+        var repl = rep.replace(/ad3/g,adlibs.libs[2]);
+        //replaces p content with 'text' key from adlibs object
+        document.getElementById('alerter').textContent= " Your Madlib is complete my Good Person" ;
+        document.getElementById('madlib').textContent = repl;
+
+        // for ( i=0;i <= al.length ; i++) {
+        // adlibs.libs[i] = al[i] ; };
+
+    };
+
+    var libsubmit = document.getElementById('submit');
+    libsubmit.addEventListener('click', libread);
+    </script>
+    <title>Madlibs.Today</title>
+</head>
+<body>
+<h1> Mab Libs for Today </h1>
+
+    <h2 id="date"> Date </h2>
+
+    <p> Enter noun of choice </p>
+    <input id="ad1" class="clr" type="text" name="noun">
+    <p> Enter verb of choice  </p>
+    <input id="ad2" class = "clr" type ="text" name="verb">
+    <p> Enter an adjective of your choice </p>
+    <input id = "ad3" class="clr"type="type" name="adj" >
+    <button id="submit" > Submit </button>
+    <div>
+        <h2 id="alerter"> Waiting for you to press submit bruh..... </h2>
+        <p id="madlib"> Madlib standing by.....
+        </p>
+    </div>
+</body>
+</html>
