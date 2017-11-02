@@ -1,19 +1,22 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, json,jsonify, render_template
+from random import randint
 
 
 app = Flask(__name__)
 
 
-EXAMPLE_MADLIB = {
-  "text": "The red stone <input type=\"text\" name=\"adlib-1\" id=\"adlib-1\"> was never as <input type=\"text\" name=\"adlib-2\" id=\"adlib-2\"> as it once was",
-  "adlibs": ["", ""]
-}
-
-
 @app.route('/madlib-today')
 def main_route():
 
-    return jsonify(EXAMPLE_MADLIB)
+    adlibfile = open("staic/madlibs/adlibs.json")
+
+    madlib_dict = json.load(adlibfile)
+
+    madlibs = madlib_dict['madlibs']
+
+    madlib = madlibs[randint(0, 4)]
+
+    return jsonify(madlib)
 
 
 @app.route('/')
