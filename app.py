@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/madlib-today')
 def main_route():
 
-    adlibfile = open("staic/madlibs/adlibs.json")
+    adlibfile = open("static/madlibs/adlibs.json")
 
     madlib_dict = json.load(adlibfile)
 
