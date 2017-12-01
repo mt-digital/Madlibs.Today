@@ -2,11 +2,11 @@
 "madlibs":[ 
 
 
-    {"text":"  Then my alarm clock went off for about <span id=\" span-ad1\"> <input type=\"text\" name=\"adlib-1\" class=\"ad\" id=\"adlib-1\"> (amount of time)</span>. It was all a dream! I had a ton of <span id=\" span-ad2\"><input type=\"text\" name=\"adlib-2\" class=\"ad\" id=\"adlib-2\"> (a holiday food) </span> before I went to sleep. Maybe that’s what gave me the crazy dream!  ",
+    {"text":"  Then my alarm clock went off for about <span id=\"span-ad1\"> <input type=\"text\" name=\"adlib-1\" class=\"ad\" id=\"adlib-1\"> (amount of time)</span>. It was all a dream! I had a ton of <span id=\"span-ad2\"><input type=\"text\" name=\"adlib-2\" class=\"ad\" id=\"adlib-2\"> (a holiday food) </span> before I went to sleep. Maybe that’s what gave me the crazy dream!  ",
      "adlibs":["", ""]},
 
 
-    {"text":"  The red stone <span id=\" span-ad1\"> <input type=\"text\" class=\"ad\" name=\"adlib-1\" id=\"adlib-1\"> </span> was never as <span id=\" span-ad2\"><input type=\"text\" name=\"adlib-2\" class=\"ad\" id=\"adlib-2\"></span> as it once was  ",
+    {"text":"  The red stone <span id=\"span-ad1\"> <input type=\"text\" class=\"ad\" name=\"adlib-1\" id=\"adlib-1\"> </span> was never as <span id=\"span-ad2\"><input type=\"text\" name=\"adlib-2\" class=\"ad\" id=\"adlib-2\"></span> as it once was  ",
      "adlibs":["", ""]}
 
 ]

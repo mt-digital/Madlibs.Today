@@ -32,6 +32,12 @@ def index():
 @app.route('/post-route', methods=['POST'])
 def print_post():
 
+    dirname = 'files_dir'
+    if not os.path.isdir(dirname):
+        # If it does not, create it.
+        os.mkdir(dirname)
+
+
     #print(request.form)
     dictionaryString = json.dumps(request.form)
     print(type(dictionaryString))
@@ -41,7 +47,9 @@ def print_post():
     # open('test-save-request.json', 'w').write(json.dumps(request.form))
 
     # New filename every time.
-    filename = str(uuid.uuid4()) + '.json'
+    #filename = str(uuid.uuid4()) + '.json'
+    filename = os.path.join(dirname, str(uuid.uuid4()) + '.json')
+
     open(filename, 'w').write(json.dumps(request.form))
 
 
